@@ -1,0 +1,70 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\begin{document}
+{\centering
+    Advanced Computer Linguistics - Assignment 1
+    \par
+    Samuel Petit - 17333946
+    \par
+}
+\section*{Question 1}
+(i) implies (ii):
+\begin{equation*}
+    P(A \cap B) = P(A|B) * P(B) = P(A) * P(B)
+\end{equation*}
+(ii) implies (i):
+\begin{equation*}
+    P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A) * P(B)}{P(B)} = P(A)
+\end{equation*}
+
+\section*{Question 2}
+\subsection*{a}
+\begin{equation*}
+    P(gw|ps) = \frac{28}{28 + 40} = \frac{28}{30}
+\end{equation*}
+Counts $gw  \cap\neg ps$ and $\neg gw  \cap\neg ps$ are not useful in this situation.
+
+\subsection*{b}
+\begin{equation*}
+    P(ps|gw) = \frac{28}{28 + 2} = \frac{28}{168}
+\end{equation*}
+Counts $gw  \cap\neg ps$ and $\neg gw  \cap\neg ps$ are not useful in this situation.
+
+\section*{Question 3}
+\section*{Question 4}
+\begin{equation}
+    P(cool: +) = \frac{62 + 108}{38 + 292} = \frac{170}{330} = 0.52
+\end{equation}
+\begin{equation}
+    P(cool: +|noisy: +) = \frac{62}{62 + 38} = \frac{62}{100} = 0.62
+\end{equation}
+
+We have $P(cool: +) \neq P(cool: +|noisy: +)$ so the variables are not independant.
+
+\section*{Question 5}
+\begin{equation}
+    P(cool: +| open: +) = \frac{90}{100} = 0.9
+\end{equation}
+\begin{equation}
+    P(cool: +| open: +, noisy: +) = \frac{54}{64} = 0.9
+\end{equation}
+
+We have $P(cool: +| open: +) = P(cool: +| open: +, noisy: +)$ so
+cool: + is conditionally independant of noisy: + given open: +.
+
+
+\begin{equation}
+    P(cool: +| open: -) = \frac{80}{400} = \frac{8}{40}
+\end{equation}
+\begin{equation}
+    P(cool: +| open: -, noisy: +) = \frac{8}{40}
+\end{equation}
+
+We have $P(cool: +| open: -) = P(cool: +| open: -, noisy: +)$ so
+cool: + is conditionally independant of noisy: + given open: -.
+
+
+\end{document}
